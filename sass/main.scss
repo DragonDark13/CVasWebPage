@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Kobzar";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Kobzar/KobzarKS_v1-020.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Naftera";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Naftera/Naftera.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Namu";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Namu/NAMU-Pro.ttf") format('truetype'), url("../fonts/Namu/NAMU-Pro.woff") format('woff'), url("../fonts/Namu/NAMU-Pro.woff2") format("woff2");
+}
+
+$themeColor1: #407BFF;
+$gutter: 12px;
+$themeColor2: fade-in($themeColor1, 0.49);
+$themeColor3: #FFDE59;
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Namu", sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.7rem;
+}
+
+h1 {
+  font-family: "Kobzar", sans-serif;
+  color: $themeColor1;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Naftera", sans-serif;
+}
+
+section {
+  background-color: $themeColor1;
+  color: #fff;
+
+  article {
+    padding: $gutter*2 0;
+
+    h3 {
+      margin-bottom: $gutter*2;
+    }
+
+    h5 {
+      margin-bottom: $gutter*2;
+    }
+
+
+    .history {
+      border-left: $gutter/2 solid #fff;
+      padding-left: $gutter*2;
+    }
+
+    .company {
+      h4 {
+        color: $themeColor3;
+      }
+
+
+    }
+  }
+
+   h6 {
+        margin-bottom: $gutter;
+      }
+
+  .university{
+    color: $themeColor3;
+  }
+
+  p{
+    margin-bottom: $gutter;
+  }
+
+}
+
+.contactPanel {
+  padding-right: 0;
+  border-right: $gutter solid $themeColor1;
+
+  article {
+    padding: $gutter*2 0;
+
+    h3{
+      background-color: #       ;
+    }
+  }
+}
+
+.decoration_line {
+  width: calc(100% + #{$gutter});
+  background-color: $themeColor1;
+  height: $gutter / 2;
+}

@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Kobzar";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Kobzar/KobzarKS_v1-020.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Naftera";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Naftera/Naftera.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Namu";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Namu/NAMU-Pro.ttf") format("truetype"), url("../fonts/Namu/NAMU-Pro.woff") format("woff"), url("../fonts/Namu/NAMU-Pro.woff2") format("woff2");
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Namu", sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.7rem;
+}
+
+h1 {
+  font-family: "Kobzar", sans-serif;
+  color: #407BFF;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Naftera", sans-serif;
+}
+
+section {
+  background-color: #407BFF;
+  color: #fff;
+}
+section article {
+  padding: 24px 0;
+}
+section article h3 {
+  margin-bottom: 24px;
+}
+section article h5 {
+  margin-bottom: 24px;
+}
+section article .history {
+  border-left: 6px solid #fff;
+  padding-left: 24px;
+}
+section article .company h4 {
+  color: #FFDE59;
+}
+section h6 {
+  margin-bottom: 12px;
+}
+section .university {
+  color: #FFDE59;
+}
+section p {
+  margin-bottom: 12px;
+}
+
+.contactPanel {
+  padding-right: 0;
+  border-right: 12px solid #407BFF;
+}
+.contactPanel article {
+  padding: 24px 0;
+}
+.contactPanel article h3 {
+  background-color: #fff;
+}
+
+.decoration_line {
+  width: calc(100% + 12px);
+  background-color: #407BFF;
+  height: 6px;
+}
+
+/*# sourceMappingURL=main.css.map */
