@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 @font-face {
   font-family: "Kobzar";
   font-style: normal;
@@ -19,9 +21,12 @@
   src: url("../fonts/Namu/NAMU-Pro.ttf") format('truetype'), url("../fonts/Namu/NAMU-Pro.woff") format('woff'), url("../fonts/Namu/NAMU-Pro.woff2") format("woff2");
 }
 
+@include font-face("e-ukraine", "../fonts/e-ukraine/e-ukraine-regular/e-ukraine-regular_w", 500, normal, eot woff2 woff ttf);
+@include font-face("e-ukraine", "../fonts/e-ukraine/e-ukraine-bold/e-ukraine-bold_w", bold, normal, eot woff2 woff ttf);
+
 $themeColor1: #407BFF;
 $gutter: 12px;
-$themeColor2: fade-in($themeColor1, 0.49);
+$themeColor2: fade-out($themeColor1, 0.49);
 $themeColor3: #FFDE59;
 
 img {
@@ -62,6 +67,38 @@ h2, h3, h4, h5 {
   font-family: "Naftera", sans-serif;
 }
 
+.header_info_block_container {
+  overflow: hidden;
+}
+
+.header_info_block {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  padding-right: 120px;
+
+
+  $position_h: 200px;
+
+  .decoration_line {
+    width: 200px;
+    height: 10px;
+    background: $themeColor1;
+    position: absolute;
+    top: -20px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    left: calc(100% - 114px);
+    border-bottom: 10px solid $themeColor3;
+    box-sizing: content-box;
+  }
+
+
+}
+
+
 section {
   background-color: $themeColor1;
   color: #fff;
@@ -75,6 +112,7 @@ section {
 
     h5 {
       margin-bottom: $gutter*2;
+      font-size: 1em;
     }
 
 
@@ -92,15 +130,15 @@ section {
     }
   }
 
-   h6 {
-        margin-bottom: $gutter;
-      }
+  h6 {
+    margin-bottom: $gutter;
+  }
 
-  .university{
+  .university {
     color: $themeColor3;
   }
 
-  p{
+  p {
     margin-bottom: $gutter;
   }
 
@@ -111,12 +149,38 @@ section {
   border-right: $gutter solid $themeColor1;
 
   article {
-    padding: $gutter*2 0;
+    padding: $gutter*2 0 0;
 
-    h3{
-      background-color: #       ;
+    & > h3 {
+      background-color: $themeColor2;
+      padding: $gutter/2 $gutter;
     }
+
+    & > p {
+      padding: 0 $gutter;
+    }
+
+    & > ul {
+      list-style: none;
+      padding: 0 $gutter;
+      margin-bottom: 0;
+    }
+
+    &.contact_block > ul > li {
+      margin-bottom: $gutter*2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & > ul > li > h4 {
+      margin-bottom: $gutter/2;
+    }
+
   }
+
+
 }
 
 .decoration_line {

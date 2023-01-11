@@ -16,6 +16,18 @@
   font-weight: normal;
   src: url("../fonts/Namu/NAMU-Pro.ttf") format("truetype"), url("../fonts/Namu/NAMU-Pro.woff") format("woff"), url("../fonts/Namu/NAMU-Pro.woff2") format("woff2");
 }
+@font-face {
+  font-family: "e-ukraine";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/e-ukraine/e-ukraine-regular/e-ukraine-regular_w.eot?") format("eot"), url("../fonts/e-ukraine/e-ukraine-regular/e-ukraine-regular_w.woff2") format("woff2"), url("../fonts/e-ukraine/e-ukraine-regular/e-ukraine-regular_w.woff") format("woff"), url("../fonts/e-ukraine/e-ukraine-regular/e-ukraine-regular_w.ttf") format("truetype");
+}
+@font-face {
+  font-family: "e-ukraine";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/e-ukraine/e-ukraine-bold/e-ukraine-bold_w.eot?") format("eot"), url("../fonts/e-ukraine/e-ukraine-bold/e-ukraine-bold_w.woff2") format("woff2"), url("../fonts/e-ukraine/e-ukraine-bold/e-ukraine-bold_w.woff") format("woff"), url("../fonts/e-ukraine/e-ukraine-bold/e-ukraine-bold_w.ttf") format("truetype");
+}
 img {
   max-width: 100%;
 }
@@ -54,6 +66,31 @@ h2, h3, h4, h5 {
   font-family: "Naftera", sans-serif;
 }
 
+.header_info_block_container {
+  overflow: hidden;
+}
+
+.header_info_block {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  padding-right: 120px;
+}
+.header_info_block .decoration_line {
+  width: 200px;
+  height: 10px;
+  background: #407BFF;
+  position: absolute;
+  top: -20px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  left: calc(100% - 114px);
+  border-bottom: 10px solid #FFDE59;
+  box-sizing: content-box;
+}
+
 section {
   background-color: #407BFF;
   color: #fff;
@@ -66,6 +103,7 @@ section article h3 {
 }
 section article h5 {
   margin-bottom: 24px;
+  font-size: 1em;
 }
 section article .history {
   border-left: 6px solid #fff;
@@ -89,10 +127,28 @@ section p {
   border-right: 12px solid #407BFF;
 }
 .contactPanel article {
-  padding: 24px 0;
+  padding: 24px 0 0;
 }
-.contactPanel article h3 {
-  background-color: #fff;
+.contactPanel article > h3 {
+  background-color: rgba(64, 123, 255, 0.51);
+  padding: 6px 12px;
+}
+.contactPanel article > p {
+  padding: 0 12px;
+}
+.contactPanel article > ul {
+  list-style: none;
+  padding: 0 12px;
+  margin-bottom: 0;
+}
+.contactPanel article.contact_block > ul > li {
+  margin-bottom: 24px;
+}
+.contactPanel article.contact_block > ul > li:last-child {
+  margin-bottom: 0;
+}
+.contactPanel article > ul > li > h4 {
+  margin-bottom: 6px;
 }
 
 .decoration_line {
