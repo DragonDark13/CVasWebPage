@@ -42,3 +42,21 @@
 		src: $src;
 	}
 }
+
+@mixin _768 {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin _1200 {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin _768_less {
+    @media  (max-width: 768px){
+        @content;
+    }
+}
