@@ -44,34 +44,47 @@ body {
   }
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1428571429em;
+  transition: 0.7s;
+}
+a:hover {
+  color: red;
+}
+
 h1 {
   color: #407BFF;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 12px;
   font-family: "Naftera", sans-serif;
+  color: #F2B833;
 }
 @media (min-width: 768px) {
   h1 {
     margin-top: 0;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-family: "Kobzar", sans-serif;
   }
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  color: #F2B833;
+  font-style: italic;
 }
 h2 span {
   display: inline-block;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 h5 {
@@ -80,6 +93,15 @@ h5 {
 
 h2, h3, h4, h5 {
   font-family: "Naftera", sans-serif;
+}
+
+header {
+  padding: 32px 0;
+  /* background: #4F87FF; */
+  background: #4F87FF;
+}
+header img {
+  transform: rotate(2deg);
 }
 
 .header_info_block_container {
@@ -93,11 +115,6 @@ h2, h3, h4, h5 {
   height: 100%;
   align-items: center;
 }
-@media (min-width: 1200px) {
-  .header_info_block {
-    padding-right: 120px;
-  }
-}
 .header_info_block .decoration_line {
   width: 200px;
   height: 10px;
@@ -107,7 +124,7 @@ h2, h3, h4, h5 {
   transform: rotate(45deg);
   transform-origin: top left;
   left: calc(100% - 114px);
-  border-bottom: 10px solid #FFDE59;
+  border-bottom: 10px solid #FFC440;
   box-sizing: content-box;
 }
 
@@ -118,6 +135,45 @@ section {
 section article {
   padding: 24px 0;
 }
+section article.personal_skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+section article.personal_skills ul li {
+  padding: 0 12px;
+  position: relative;
+  overflow: hidden;
+  background: #3170ff;
+  margin-bottom: 12px;
+}
+section article.personal_skills ul li p {
+  z-index: 2;
+  position: relative;
+  margin-bottom: 0;
+}
+section article.personal_skills ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  background: #4258ff;
+  pointer-events: none;
+  z-index: 1;
+}
+section article.personal_skills ul li.lvl-1:after {
+  width: 25%;
+}
+section article.personal_skills ul li.lvl-2:after {
+  width: 50%;
+}
+section article.personal_skills ul li.lvl-3:after {
+  width: 75%;
+}
+section article.personal_skills ul li.lvl-4:after {
+  width: 100%;
+}
 @media (max-width: 768px) {
   section article.personal_skills div > div:not(:last-child) > ul {
     margin-bottom: 0;
@@ -125,17 +181,46 @@ section article {
 }
 section article h3 {
   margin-bottom: 24px;
+  letter-spacing: 6px;
+}
+section article h3:first-letter {
+  color: #F2B833;
+  font-size: 2em;
+  /* border-top: 1px solid; */
+  /* width: 50px
+  px
+  ; */
+  /* display: inline-block; */
+  /* letter-spacing: 10px; */
+  border-bottom: 2px solid;
 }
 section article h5 {
   margin-bottom: 24px;
   font-size: 1em;
 }
-section article .history {
-  border-left: 6px solid #fff;
-  padding-left: 24px;
+section article .company {
+  position: relative;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+section article .company .item_elem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #376adb;
+  z-index: 0;
+  transform-origin: center;
+  pointer-events: none;
+  transform: skew(4deg);
+}
+section article .company .content {
+  position: relative;
+  z-index: 2;
 }
 section article .company h4 {
-  color: #FFDE59;
+  color: #FFC440;
 }
 section .additional_skills {
   color: rgba(255, 255, 255, 0.7);
@@ -144,31 +229,21 @@ section h6 {
   margin-bottom: 12px;
 }
 section .university {
-  color: #FFDE59;
+  color: #FFC440;
 }
 section p {
   margin-bottom: 12px;
 }
 
-@media (min-width: 768px) {
-  .contactPanel {
-    padding-right: 0;
-    border-right: 12px solid #407BFF;
-  }
+.contactPanel {
+  color: #fff;
 }
 .contactPanel article {
-  padding: 24px 0 0;
-}
-.contactPanel article > h3 {
-  background-color: rgba(64, 123, 255, 0.51);
-  padding: 6px 12px;
-}
-.contactPanel article > p {
-  padding: 0 12px;
+  padding-top: 24px;
 }
 .contactPanel article > ul {
   list-style: none;
-  padding: 0 12px;
+  padding-left: 0;
   margin-bottom: 0;
 }
 .contactPanel article.contact_block > ul > li {
@@ -177,14 +252,54 @@ section p {
 .contactPanel article.contact_block > ul > li:last-child {
   margin-bottom: 0;
 }
+.contactPanel article h3 {
+  color: #F2B833;
+}
 .contactPanel article > ul > li > h4 {
   margin-bottom: 6px;
+  color: #F2B833;
 }
 
 .decoration_line {
   width: calc(100% + 12px);
   background-color: #407BFF;
   height: 6px;
+}
+
+footer {
+  background: #336FF2;
+}
+footer h3 {
+  color: #F2B833;
+}
+footer .contact_block ul {
+  display: flex;
+}
+footer .contact_block li {
+  margin-right: 12px;
+}
+footer .contact_block a {
+  display: block;
+  /* width: 20px; */
+  /* height: 20px; */
+  background: #d73fac;
+  /* margin-right: 12px; */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-11deg);
+  transition: 0.7s;
+}
+footer .contact_block a:hover {
+  color: #d73fac;
+  background: #fff;
+  transform: skew(-11deg) scale(1.1);
+}
+footer .contact_block i {
+  font-size: 27px;
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
